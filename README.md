@@ -15,6 +15,22 @@ Load Network Image
     )
 ```
 
+Load Network Image
+
+```dart
+ SizedBox(
+    height: 100,
+    width: 100,
+    child: ImageLoaderFlutterWidgets(
+          radius: 0,
+          circle: false,
+          image: File("file_path").path,
+        ),
+    )
+```
+
+
+
 ## Additional information
 
 TODO: Tell users more about the package: where to find more information, how to
