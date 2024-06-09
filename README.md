@@ -15,7 +15,7 @@ Load Network Image
     )
 ```
 
-Load Network Image
+Load File Image
 
 ```dart
  SizedBox(
@@ -25,6 +25,20 @@ Load Network Image
           radius: 0,
           circle: false,
           image: File("file_path").path,
+        ),
+    )
+```
+
+Load Assets Image
+
+```dart
+ SizedBox(
+    height: 100,
+    width: 100,
+    child: ImageLoaderFlutterWidgets(
+          radius: 0,
+          circle: false,
+          image: "assets/images/file_name.png",
         ),
     )
 ```
