@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:image_loader_flutter/Screens/view_image.dart';
 import 'package:photo_view/photo_view.dart';
 
-class ImageLoaderFlutter extends StatelessWidget {
+class ImageLoaderFlutterWidgets extends StatelessWidget {
   String? image;
   bool circle = false;
   bool onTap;
   double? radius;
   double padding;
 
-  ImageLoaderFlutter(
+  ImageLoaderFlutterWidgets(
       {super.key,
       this.image,
       required this.radius,
