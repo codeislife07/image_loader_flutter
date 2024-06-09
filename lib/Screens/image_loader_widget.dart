@@ -10,32 +10,36 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
   String? image;
   bool circle = false;
   bool onTap;
+  Widget placeHolderWidget;
   double? radius;
   double padding;
 
-  ImageLoaderFlutterWidgets(
-      {super.key,
-      this.image,
-      required this.radius,
-      required this.circle,
-      this.onTap = true,
-      this.padding = 0});
+  ImageLoaderFlutterWidgets({
+    super.key,
+    this.image,
+    required this.radius,
+    required this.circle,
+    this.onTap = true,
+    this.padding = 0,
+    this.placeHolderWidget = const Center(
+      child: Icon(Icons.photo),
+    ),
+  });
   @override
   Widget build(BuildContext context) {
-    var colorBg = Theme.of(context).colorScheme.primary;
+    var colorBg = Theme.of(context).cardColor;
     var error = Container(
-        decoration: BoxDecoration(
-          color: colorBg,
-          border: Border.all(color: colorBg),
-          shape: circle ? BoxShape.circle : BoxShape.rectangle,
-          borderRadius: circle ? null : BorderRadius.circular(radius!),
-        ),
-        child: ClipRRect(
-            borderRadius: BorderRadius.circular(circle ? 100 : (radius ?? 0)),
-            child: Image.asset(
-              "assets/placeHolders/image_not_load.png",
-              fit: BoxFit.fill,
-            )));
+      decoration: BoxDecoration(
+        color: colorBg,
+        border: Border.all(color: colorBg),
+        shape: circle ? BoxShape.circle : BoxShape.rectangle,
+        borderRadius: circle ? null : BorderRadius.circular(radius!),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(circle ? 100 : (radius ?? 0)),
+        child: placeHolderWidget,
+      ),
+    );
     var placeHolder = Container(
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
@@ -49,7 +53,7 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
     var simple = Container(
       decoration: BoxDecoration(
         color: colorBg,
-        border: Border.all(color: colorBg),
+        border: Border.all(color: Colors.grey[300]!),
         shape: circle ? BoxShape.circle : BoxShape.rectangle,
         borderRadius: circle ? null : BorderRadius.circular(radius!),
       ),
