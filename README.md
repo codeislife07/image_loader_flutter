@@ -42,11 +42,49 @@ Load Assets Image
         ),
     )
 ```
+VIew fullscreen image
+
+```dart
+ SizedBox(
+    height: 100,
+    width: 100,
+    child: ImageLoaderFlutterWidgets(
+          radius: 0,
+          circle: false,
+          onTap: true,
+          image: "assets/images/file_name.png",
+        ),
+    )
+```
+
+Show custom radius
+
+```dart
+ SizedBox(
+    height: 100,
+    width: 100,
+    child: ImageLoaderFlutterWidgets(
+          radius: 10,
+          circle: false,
+          onTap: true,
+          image: "assets/images/file_name.png",
+        ),
+    )
+```
 
 
+Show circle image
 
-## Additional information
+```dart
+ SizedBox(
+    height: 100,
+    width: 100,
+    child: ImageLoaderFlutterWidgets(
+          radius: 0,
+          circle: true,
+          image: "assets/images/file_name.png",
+        ),
+    )
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
