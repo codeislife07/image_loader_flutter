@@ -4,17 +4,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_loader_flutter/Screens/view_image.dart';
-import 'package:photo_view/photo_view.dart';
 
 class ImageLoaderFlutterWidgets extends StatelessWidget {
-  String? image;
-  bool circle = false;
-  bool onTap;
-  Widget placeHolderWidget;
-  double? radius;
-  double padding;
+  final String? image;
+  final bool circle;
+  final bool onTap;
+  final Widget placeHolderWidget;
+  final double? radius;
+  final double padding;
 
-  ImageLoaderFlutterWidgets({
+  const ImageLoaderFlutterWidgets({
     super.key,
     this.image,
     required this.radius,
@@ -41,7 +40,7 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
       ),
     );
     var placeHolder = Container(
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: colorBg,
           border: Border.all(color: colorBg),

@@ -1,5 +1,5 @@
 name: image_loader_flutter
-description: "A Flutetr PAckage For Load image from internet/asstes/file"
+description: "image_loader_flutter is a Flutter package that simplifies loading images from various sources with caching and error handling. It supports loading from URLs, assets, and files, offering placeholder and error widgets. The package enhances performance with image caching, ensuring smooth and efficient image rendering in your Flutter apps. Easy to integrate and use, it improves user experience by handling image loading seamlessly."
 version: 0.0.3
 homepage: https://github.com/codeislife07/image_loader_flutter
 
