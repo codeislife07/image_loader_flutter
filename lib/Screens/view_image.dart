@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 
 class ViewImageScreen extends StatelessWidget {
-  ImageProvider iMageProvider;
-  ViewImageScreen({super.key, required this.iMageProvider});
+  //image imageprovider to load image
+  final ImageProvider iMageProvider;
+  const ViewImageScreen({super.key, required this.iMageProvider});
 
   @override
   Widget build(BuildContext context) {

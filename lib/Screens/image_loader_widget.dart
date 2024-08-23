@@ -5,15 +5,25 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_loader_flutter/Screens/view_image.dart';
 
+
+//main  widget to diaplay image
 class ImageLoaderFlutterWidgets extends StatelessWidget {
+  //url or path of image
   final String? image;
+  //show image as circle shape
   final bool circle;
+  //navigates to show full image
   final bool onTap;
+  //placeholder of image if error occur while load image
   final Widget placeHolderWidget;
+  //border radius of image
   final double? radius;
+  //padding of image
   final double padding;
+  //background color of image
   final Color? bgColor;
 
+  //constructor of ImageLoaderFlutterWidgets
   const ImageLoaderFlutterWidgets({
     super.key,
     this.image,

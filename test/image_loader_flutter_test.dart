@@ -4,7 +4,7 @@ import 'package:image_loader_flutter/image_loader_flutter.dart';
 
 void main() {
   test('adds one to input values', () {
-    final calculator = ImageLoaderFlutterWidgets(
+    const calculator = ImageLoaderFlutterWidgets(
       radius: 0,
       circle: false,
     );
