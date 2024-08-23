@@ -12,6 +12,7 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
   final Widget placeHolderWidget;
   final double? radius;
   final double padding;
+  final Color? bgColor;
 
   const ImageLoaderFlutterWidgets({
     super.key,
@@ -23,10 +24,11 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
     this.placeHolderWidget = const Center(
       child: Icon(Icons.photo),
     ),
+    this.bgColor,
   });
   @override
   Widget build(BuildContext context) {
-    var colorBg = Theme.of(context).cardColor;
+    var colorBg = bgColor ?? Theme.of(context).cardColor;
     var error = Container(
       decoration: BoxDecoration(
         color: colorBg,
@@ -75,10 +77,16 @@ class ImageLoaderFlutterWidgets extends StatelessWidget {
                   ? Image.asset(
                       image!,
                       fit: BoxFit.fill,
+                      errorBuilder: (_, __, ___) {
+                        return error;
+                      },
                     )
                   : Image.file(
                       File(image!),
                       fit: BoxFit.fill,
+                      errorBuilder: (_, __, ___) {
+                        return error;
+                      },
                     ),
         ),
       ),
