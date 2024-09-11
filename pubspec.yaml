@@ -1,6 +1,6 @@
 name: image_loader_flutter
 description: "The package enhances performance with image caching, ensuring smooth and efficient image rendering in your Flutter apps."
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/codeislife07/image_loader_flutter
 
 false_secrets:
@@ -18,8 +18,8 @@ dependencies:
   photo_view: ^0.15.0
 
 dev_dependencies:
-  build_runner: ^2.4.12
-  flutter_lints: ^4.0.0
+  build_runner: ^2.4.4
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
   
