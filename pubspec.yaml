@@ -1,6 +1,6 @@
 name: image_loader_flutter
-description: "image_loader_flutter is a Flutter package that simplifies loading images from various sources with caching and error handling. It supports loading from URLs, assets, and files, offering placeholder and error widgets. The package enhances performance with image caching, ensuring smooth and efficient image rendering in your Flutter apps."
-version: 0.0.5
+description: "The package enhances performance with image caching, ensuring smooth and efficient image rendering in your Flutter apps."
+version: 0.0.7
 homepage: https://github.com/codeislife07/image_loader_flutter
 
 false_secrets:
@@ -14,12 +14,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cached_network_image:  ^3.3.1
+  cached_network_image:  ^3.4.1
   photo_view: ^0.15.0
 
 dev_dependencies:
-  build_runner: ^2.4.4
-  flutter_lints: ^2.0.1
+  build_runner: ^2.4.12
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
   
