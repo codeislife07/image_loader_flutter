@@ -37,35 +37,32 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           children: [
             //load from internet
-            SizedBox(
-              height: 150,
+            ImageLoaderFlutterWidgets(
+              radius: 10,
+              onTap: true,
+              height: 100,
               width: 150,
-              child: ImageLoaderFlutterWidgets(
-                radius: 10,
-                onTap: true,
-                circle: true,
-                image:
-                    "https://avatars.githubusercontent.com/u/84148157?s=64&v=4",
-              ),
+              circle: false,
+              fit: BoxFit.contain,
+              image:
+                  "https://avatars.githubusercontent.com/u/84148157?s=64&v=4",
             ),
             SizedBox(
               height: 10,
             ),
             //load from internet
-            SizedBox(
+            ImageLoaderFlutterWidgets(
+              radius: 10,
               height: 150,
               width: 150,
-              child: ImageLoaderFlutterWidgets(
-                radius: 10,
-                onTap: true,
-                circle: true,
-                image: "http",
-              ),
-            )
+              onTap: true,
+              circle: true,
+              image: "http",
+            ),
           ],
         ),
       ),
