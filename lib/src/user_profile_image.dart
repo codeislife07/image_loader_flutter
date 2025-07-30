@@ -16,8 +16,8 @@ class UserProfileImage extends StatelessWidget {
   final Color? borderColor; // if null, use gradient border
   final BoxFit fit;
 
-  final double? width; // total width including border
-  final double? height; // total height including border
+  final double width; // total width including border
+  final double height; // total height including border
 
   const UserProfileImage({
     super.key,
@@ -33,8 +33,8 @@ class UserProfileImage extends StatelessWidget {
     this.borderWidth = 3.0,
     this.borderColor,
     this.fit = BoxFit.cover,
-    this.width,
-    this.height,
+    this.width = 100,
+    this.height = 100,
   });
 
   static const Map<String, Color> _charColors = {
@@ -112,12 +112,14 @@ class UserProfileImage extends StatelessWidget {
           onTap: enableTap,
           height: innerHeight,
           width: innerWidth,
-          placeHolderWidget: Text(
-            initial,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: radius * 0.8,
+          placeHolderWidget: Center(
+            child: Text(
+              initial,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: height * 0.5,
+              ),
             ),
           ),
           bgColor: bgColor,

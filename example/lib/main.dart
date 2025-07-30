@@ -63,6 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
               circle: true,
               image: "http",
             ),
+            UserProfileImage(
+              userName: "demo",
+              height: 100,
+              width: 100,
+              imageUrl: '',
+            )
           ],
         ),
       ),
